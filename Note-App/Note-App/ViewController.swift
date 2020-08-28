@@ -54,9 +54,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath) as! NoteTableViewCell
         
-        cell.textLabel?.text = notesArray[indexPath.row].title
+        cell.titleLabel?.text = notesArray[indexPath.row].title
+        cell.noteLabel?.text = notesArray[indexPath.row].note
+        cell.dateLabel?.text = notesArray[indexPath.row].date 
         
         return cell
     }

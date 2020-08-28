@@ -31,19 +31,21 @@ class AddNoteViewController: UIViewController {
     
     
     @IBAction func SaveClicked(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.string(from: Date())
         
         if update == true {
-               APIFunctions.functions.updateNote(date: "UPDATE", title: titleTextField.text!, note: bodyTextView.text!, id:note!._id)
+               APIFunctions.functions.updateNote(date: date, title: titleTextField.text!, note: bodyTextView.text!, id:note!._id)
                   
             
-        } else
-        {
-            APIFunctions.functions.addNote(date: "CREATE", title: titleTextField.text!, note: bodyTextView.text!)
-        }
+        } else if titleTextField.text != "" && bodyTextView.text != ""  {
+             APIFunctions.functions.addNote(date: date, title: titleTextField.text!, note: bodyTextView.text!)
+       
         self.navigationController?.popViewController(animated: true)
       
     }
-        
+    }
         
     
     override func viewDidLoad() {

@@ -19,14 +19,48 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" id="CZk-yO-BQr">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="185" id="CZk-yO-BQr" customClass="NoteTableViewCell" customModule="Note_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="185"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CZk-yO-BQr" id="eJ5-Ur-lzj">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cit-3E-4q7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7H-RO-JOg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mZs-k8-13O">
+                                                            <rect key="frame" x="0.0" y="61.5" width="414" height="62"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq6-1q-xbM">
+                                                            <rect key="frame" x="0.0" y="123.5" width="414" height="61.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cit-3E-4q7" firstAttribute="top" secondItem="eJ5-Ur-lzj" secondAttribute="top" id="7ge-J8-1bm"/>
+                                                <constraint firstAttribute="bottom" secondItem="cit-3E-4q7" secondAttribute="bottom" id="CYK-Xd-2aC"/>
+                                                <constraint firstAttribute="trailing" secondItem="cit-3E-4q7" secondAttribute="trailing" id="wGF-fi-bFc"/>
+                                                <constraint firstItem="cit-3E-4q7" firstAttribute="leading" secondItem="eJ5-Ur-lzj" secondAttribute="leading" id="z2k-cZ-WSu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="qq6-1q-xbM" id="YUw-rT-ZO6"/>
+                                            <outlet property="noteLabel" destination="mZs-k8-13O" id="dNU-Hy-kKe"/>
+                                            <outlet property="titleLabel" destination="Z7H-RO-JOg" id="fda-sm-dhY"/>
                                             <segue destination="7gx-Qu-Bb0" kind="show" identifier="updateNoteSegue" id="yKx-8m-mRb"/>
                                         </connections>
                                     </tableViewCell>

@@ -16,6 +16,7 @@
 		FB3FC1C524F85C5A00B44DE0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FB3FC1C424F85C5A00B44DE0 /* Alamofire */; };
 		FB3FC1C724F85C7800B44DE0 /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FC1C624F85C7800B44DE0 /* APIFunctions.swift */; };
 		FB3FC1C924F86A3400B44DE0 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FC1C824F86A3400B44DE0 /* AddNoteViewController.swift */; };
+		FB3FC1CB24F998D600B44DE0 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FC1CA24F998D600B44DE0 /* NoteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		FB3FC1BD24F855A100B44DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB3FC1C624F85C7800B44DE0 /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
 		FB3FC1C824F86A3400B44DE0 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		FB3FC1CA24F998D600B44DE0 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				FB3FC1BD24F855A100B44DE0 /* Info.plist */,
 				FB3FC1C624F85C7800B44DE0 /* APIFunctions.swift */,
 				FB3FC1C824F86A3400B44DE0 /* AddNoteViewController.swift */,
+				FB3FC1CA24F998D600B44DE0 /* NoteTableViewCell.swift */,
 			);
 			path = "Note-App";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				FB3FC1B024F8559E00B44DE0 /* AppDelegate.swift in Sources */,
 				FB3FC1C924F86A3400B44DE0 /* AddNoteViewController.swift in Sources */,
 				FB3FC1B224F8559E00B44DE0 /* SceneDelegate.swift in Sources */,
+				FB3FC1CB24F998D600B44DE0 /* NoteTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
