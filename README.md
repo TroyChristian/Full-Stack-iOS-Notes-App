@@ -1,2 +1,3 @@
-# Full-Stack-iOS-Notes-App
-Code With Chris One Day Build, iOS notes app with custom back end.
+#ReadMe
+
+A full stack iOS notes App courtesy of @CodeWithChris, demonstrates how to sync a node.js backend with Coredata in an iOS application
